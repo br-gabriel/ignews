@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { getSession } from 'next-auth/react';
+import { getSession, useSession } from 'next-auth/react';
 import { fauna } from '../../services/fauna';
 import { query as q } from 'faunadb'
 import { stripe } from '../../services/stripe';
@@ -7,7 +7,7 @@ import { stripe } from '../../services/stripe';
 type User = {
     ref: {
         id: string;
-    }
+    },
     data: {
         stripe_customer_id: string;
     }
@@ -16,6 +16,7 @@ type User = {
 export default async (req: NextApiRequest, res: NextApiResponse) => {
     if(req.method === 'POST') {
         const session = await getSession({ req })
+        //const { data: session } = useSession();
         
         const user = await fauna.query<User>(
             q.Get(
@@ -46,10 +47,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
             customerId = stripeCustomer.id
         }
-
-        
-
-        
 
         const stripeCheckoutSession = await stripe.checkout.sessions.create({
             customer: customerId,
