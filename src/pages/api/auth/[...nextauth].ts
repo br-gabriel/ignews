@@ -20,7 +20,7 @@ export default NextAuth({
     signingKey: process.env.SIGNING_KEY,
   },
   callbacks: {
-    async signIn(user, account, profile) {
+    async signIn({user, account, profile}) {
       const { email } = user
 
       try {
@@ -46,7 +46,7 @@ export default NextAuth({
             )
           )
         )
-          
+        return true
       } catch {
         return false
       }
