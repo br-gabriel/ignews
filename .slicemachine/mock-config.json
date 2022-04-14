@@ -1,13 +1,27 @@
 {
   "_cts": {
     "my-publication-type": {
-      "Title": {
+      "title": {
         "config": {
           "patternType": "HEADING",
           "blocks": 1
         }
       },
-      "Publication": {
+      "content": {
+        "config": {
+          "patternType": "STORY",
+          "blocks": 1
+        }
+      }
+    },
+    "my-post-type": {
+      "title": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      },
+      "content": {
         "config": {
           "patternType": "STORY",
           "blocks": 1

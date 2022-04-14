@@ -1,34 +1,24 @@
 {
-  "id": "c38aedf9-f3d0-40d5-bc8e-21da5079968a",
-  "uid": "quia-quos-doloribus",
+  "id": "62d35cf0-78dc-413b-9202-38cea35ad3d9",
+  "uid": "id-quam-dicta",
   "type": "my-publication-type",
   "data": {
-    "Title": [
+    "title": [
       {
         "type": "heading1",
-        "text": "Enhance rich communities",
+        "text": "Target collaborative ROI",
         "spans": []
       }
     ],
-    "Publication": [
+    "content": [
       {
         "type": "heading1",
-        "text": "Aggregate mission-critical e-commerce",
+        "text": "Brand interactive partnerships",
         "spans": []
       },
       {
-        "type": "image",
-        "dimensions": {
-          "width": 900,
-          "height": 500
-        },
-        "alt": "Placeholder image",
-        "copyright": null,
-        "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=900&h=500&fit=crop"
-      },
-      {
         "type": "paragraph",
-        "text": "Aliquip aute in cillum sunt Lorem dolore cillum. Culpa aliquip laborum non amet sunt mollit adipisicing non aliqua tempor.",
+        "text": "Sint nostrud et consequat aute in et irure est non consectetur.",
         "spans": []
       }
     ]
