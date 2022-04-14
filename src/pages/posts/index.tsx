@@ -13,7 +13,7 @@ type Post = {
 }
 
 interface PostsProps {
-    posts : Post[];
+    posts : Post[]
 }
 
 export default function Posts({ posts }: PostsProps) {
@@ -30,7 +30,7 @@ export default function Posts({ posts }: PostsProps) {
                             <time>{post.updatedAt}</time>
                             <strong>{post.title}</strong>
                             <p>{post.excerpt}</p>
-                        </a>
+                        </a>                        
                     ))}
                 </div>
             </main>
@@ -38,7 +38,7 @@ export default function Posts({ posts }: PostsProps) {
     );
 }
 
-export const getStaticProps: GetStaticProps = async () =>  {
+export const getStaticProps: GetStaticProps = async () => {
     const prismic = getPrismicClient()
 
     const response = await prismic.query<any>([
@@ -48,22 +48,21 @@ export const getStaticProps: GetStaticProps = async () =>  {
         pageSize: 100,
     })
 
+
     const posts = response.results.map(post => {
-        return {
+        return{
             slug: post.uid,
             title: RichText.asText(post.data.title),
             excerpt: post.data.content.find(content => content.type === 'paragraph')?.text ?? '',
-            updatedAt: new Date(post.last_publication_date).toLocaleDateString('pt-BR', {
-                day: '2-digit',
-                month: 'long',
-                year: 'numeric'
+            updatedAt: new Date(post.last_publication_date).toLocaleDateString('pt-BR',{
+                day:'2-digit',
+                month:'long',
+                year:'numeric'
             })
-        };
+        }
     })
 
     return {
-        props: {
-            posts
-        }
+        props: {posts}
     }
 }

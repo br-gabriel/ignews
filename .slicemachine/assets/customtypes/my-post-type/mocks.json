@@ -1,0 +1,36 @@
+{
+  "id": "e5c81108-7158-4ad4-8c4d-b28265af6720",
+  "uid": "voluptas-consequuntur-ipsa",
+  "type": "my-post-type",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "Generate B2C platforms",
+        "spans": []
+      }
+    ],
+    "content": [
+      {
+        "type": "heading1",
+        "text": "Deliver clicks-and-mortar systems",
+        "spans": []
+      },
+      {
+        "type": "image",
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51?w=900&h=500&fit=crop"
+      },
+      {
+        "type": "paragraph",
+        "text": "Nulla sunt voluptate incididunt sit nulla culpa labore consequat exercitation quis elit nostrud aute. Ullamco ex esse cupidatat fugiat do nisi aliquip.",
+        "spans": []
+      }
+    ]
+  }
+}
